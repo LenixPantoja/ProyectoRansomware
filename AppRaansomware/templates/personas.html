@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de personas</title>
+</head>
+<body style="background: green;">
+    <h1>Personas Jakeadas :V</h1>
+    <ul>
+        {% for persona in personas %}
+            <li>
+                <span>Nombre :{{ persona.nombre }}</span><br>
+                <span>Apellido: {{ persona.apellido }}</span> <br>
+                <span>Correo: {{persona.correo}}</span> <br>
+                <span>Contrasenia: {{persona.contrasenia}}</span><br>
+                <span>Numero de tarjeta de credito: {{persona.numeroTC}}</span><br>
+                <span>Numero de ccv: {{persona.ccv}}</span><br>
+                <span>Fecha de caducidad: {{persona.fechaCaducidad}}</span><br>
+                <span>Telefono: {{persona.telefono}}</span><br>
+                <span>Dirección: {{persona.direccion}}</span><br>
+            </li>
+        {% empty %}
+            <li>No hay personas registradas.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

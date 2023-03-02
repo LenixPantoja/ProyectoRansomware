@@ -1,0 +1,51 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario de registro de datos personales</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'styles.css'%}">
+</head>
+<body>
+	<img style="width: 100%;" src="{% static 'img/code.gif'%}" alt="">
+	<div style="color: white;background: white;margin-top: -80%;">
+		<form method="post">
+			{% csrf_token %}
+			
+			<h2>Completa este formulario</h2>
+			<label for="nombre">Nombre:</label>
+			<input type="text" id="nombre" name="nombre" required>
+	
+			<label for="apellido">Apellido:</label>
+			<input type="text" id="apellido" name="apellido" required>
+	
+			<label for="correo">Correo electrónico:</label>
+			<input type="email" id="correo" name="correo" required>
+	
+			<label for="contrasenia">Contraseña:</label>
+			<input type="text" id="contrasenia" name="contrasenia" required>
+	
+			<label for="numeroTC">numero de tarjeta de credito:</label>
+			<input type="text" id="numeroTC" name="numeroTC" required>
+	
+			<label for="ccv">CCV:</label>
+			<input type="text" id="ccv" name="ccv" required>
+	
+			<label for="telefono">Teléfono:</label>
+			<input type="tel" id="telefono" name="telefono" required>
+	
+			<label for="fechaCaducidad">Fecha de caducidad:</label>
+			<input type="text" id="fechaCaducidad" name="fechaCaducidad" required>
+	
+			<label for="telefono">Teléfono:</label>
+			<input type="text" id="telefono" name="telefono" required>
+	
+			<label for="direccion">Dirección:</label>
+			<textarea id="direccion" name="direccion" required></textarea>
+	
+			<button type="submit" id="enviar">Enviar</button>
+		</form>
+	</div>
+</body>
+</html>
